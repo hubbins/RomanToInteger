@@ -18,7 +18,7 @@ namespace RomanToInteger
 
             while (i < s.Length)
             {
-                // look at current number and next number
+                // look at current numeral and next numeral, if current is less process both together
                 if (i < s.Length - 1 && GetValue(s[i]) < GetValue(s[i + 1]))
                 {
                     total += (GetValue(s[i + 1]) - GetValue(s[i]));
