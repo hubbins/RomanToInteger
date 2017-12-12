@@ -6,15 +6,14 @@ namespace RomanToInteger
 {
     public class Solution
     {
-        private readonly Dictionary<char, int> Numerals = new Dictionary<char, int>()
-        {
-            {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000}
-        };
-
         public int RomanToInt(string s)
         {
-            int total = 0;  // accumulator
-            int i = 0;      // string index
+            var Numerals = new Dictionary<char, int>()
+            {
+                {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000}
+            };
+            var total = 0;  // accumulator
+            var i = 0;      // string index
 
             // accumulate total as we inspect each numeral
             // if smaller numeral before larger numeral means subtract smaller from larger, then add result, else add the numeral
