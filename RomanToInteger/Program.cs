@@ -6,7 +6,9 @@ namespace RomanToInteger
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var s = new Solution();
+            //s.RomanToInt("V");
+            Console.WriteLine("Converting XIV to " + s.RomanToInt("XIV"));
         }
     }
 }
