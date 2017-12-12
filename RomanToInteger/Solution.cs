@@ -15,12 +15,11 @@ namespace RomanToInteger
         public int RomanToInt(string s)
         {
             var total = 0;  // accumulator
-            var i = 0;      // string index
 
             // accumulate total as we inspect each numeral
             // if smaller numeral before larger numeral means subtract smaller from larger, then add result, else add the numeral
 
-            while (i < s.Length)
+            for (var i = 0; i < s.Length; i++)
             {
                 // look at current numeral and next numeral, if current is less process both together
                 if (i < s.Length - 1 && Numerals[s[i]] < Numerals[s[i + 1]])
@@ -32,8 +31,6 @@ namespace RomanToInteger
                 {
                     total += Numerals[s[i]];
                 }
-
-                i++;
             }
 
             return total;
