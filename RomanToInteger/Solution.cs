@@ -17,7 +17,7 @@ namespace RomanToInteger
             int i = 0;      // string index
 
             // accumulate total as we inspect each numeral
-            // smaller numeral before larger numeral means subtraction, else addition
+            // if smaller numeral before larger numeral means subtract smaller from larger, then add result, else add the numeral
 
             while (i < s.Length)
             {
